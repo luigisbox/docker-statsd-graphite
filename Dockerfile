@@ -11,6 +11,7 @@ RUN curl https://grafanarel.s3.amazonaws.com/builds/grafana_${GRAFANA_VERSION}_a
 ADD grafana.sh /etc/service/grafana/run
 
 VOLUME ["/var/lib/grafana", "/var/log/grafana", "/etc/grafana"]
+VOLUME ["/opt/graphite/storage/whisper"]
 
 EXPOSE 3000
 
